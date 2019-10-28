@@ -7,7 +7,7 @@ public class Queue <Item> {
     private Node last; // 最近添加结点的链接
     private Node first; //最早添加结点的链接
     private int N;
-    class Node{
+    private class Node{
         Item item;
         Node next;
     }
