@@ -63,10 +63,8 @@ public class BinarySearchST<Key extends Comparable<Key>,Value> {
         if (key == null) throw new IllegalArgumentException("argument to delete() is null");
         if (isEmpty()) return;
 
-        // compute rank
         int i = rank(key);
 
-        // key not in table
         if (i == N || keys[i].compareTo(key) != 0) {
             return;
         }
@@ -77,7 +75,7 @@ public class BinarySearchST<Key extends Comparable<Key>,Value> {
         }
 
         N--;
-        keys[N] = null;  // to avoid loitering
+        keys[N] = null;
         values[N] = null;
 
         // resize if 1/4 full
