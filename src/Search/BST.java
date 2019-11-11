@@ -1,6 +1,5 @@
 package Search;
 
-
 /**
  * @author Nate yu
  * @date 2019/11/11 - 19:46
@@ -161,6 +160,25 @@ public class BST<Key extends Comparable<Key>,Value> {
         }
         x.N = size(x.left) + size(x.right) + 1;
         return x;
+    }
+
+    public Iterable<Key> keys(){
+        return keys(min(),max());
+    }
+
+    public Iterable<Key> keys(Key low,Key high){
+        Queue<Key> queue = new Queue<Key>();
+        keys(root,queue,low,high);
+        return queue;
+    }
+
+    private void keys(Node x,Queue<Key> queue,Key low,Key high){
+        if (x == null) return;
+        int cmplow = low.compareTo(x.key);
+        int cmphigh = high.compareTo(x.key);
+        if (cmplow < 0) keys(x.left,queue,low,high);
+        if (cmplow <= 0 && cmphigh >= 0) queue.enqueue(x.key);
+        if (cmphigh > 0) keys(x.right,queue,low,high);
     }
 }
 
