@@ -24,3 +24,4 @@
 ## 图
 * [Graph 数据类型以及常用的处理代码](https://github.com/Nate-yu/Algorithms/blob/master/src/Graph/Graph.java)
 * [深度优先搜索DFS](https://github.com/Nate-yu/Algorithms/blob/master/src/Graph/DepthFirstSearch.java)
+* [用DFS查找图中路径](https://github.com/Nate-yu/Algorithms/blob/master/src/Graph/DepthFirstPaths.java)
