@@ -20,12 +20,12 @@ public class Graph {
             adj[v] = new Bag<Integer>();
         }
     }
-    public  Graph(Scanner scanner){
-        this(scanner.nextInt()); // read the V and init the graph
-        int E = scanner.nextInt(); // read the E
+    public  Graph(In in){
+        this(in.readInt()); // read the V and init the graph
+        int E = in.readInt(); // read the E
         for (int i = 0; i < E; i++){ // add an edge
-            int v = scanner.nextInt(); // read a vertex
-            int w = scanner.nextInt(); // read another vertex
+            int v = in.readInt(); // read a vertex
+            int w = in.readInt(); // read another vertex
             addEdge(v,w); // add an edge which can link them
         }
     }

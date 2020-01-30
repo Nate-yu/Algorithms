@@ -9,7 +9,7 @@ import java.nio.file.Path;
 public class DepthFirstSearch {
     private boolean[] marked;
     private int count;
-    
+
     public int count(){
         return count;
     }
